@@ -1,0 +1,5 @@
+#Actualizar Azure CLI y extensiones
+az upgrade
+
+#CLI version
+az version

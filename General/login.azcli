@@ -1,0 +1,9 @@
+az login
+
+# Iniciar sesion con tenant deseado.
+az login --tenant a6c8bafc-15cd-4b41-ad81-00e76f92ed02
+
+# sign in as a different user
+az login --user <myAlias@myCompany.com> --password <myPassword>
+
+

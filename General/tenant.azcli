@@ -1,0 +1,7 @@
+#Muestra la lista de los tenant existentes en la cuenta
+az account tenant list
+
+#Muestra la lista de los tenant existentes en la cuenta en formato table
+az account tenant list --output table
+
+

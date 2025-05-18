@@ -1,0 +1,16 @@
+#Mostrar informacion de subcription actual
+az account show
+
+# muestra las suscripciones 
+az account list
+
+# muestra las suscripciones en formato tabla
+az account list --output table
+
+# cambiar de subscription
+az account set --subscription "Subscription 1"
+
+#Guardar Id de subscription en variable
+$subscriptionId = (az account show --query id -o tsv)
+#Imprimir en CLI el valor de la variable
+echo $subscriptionId

@@ -1,0 +1,4 @@
+#Lista de regiones azure en formato tabla
+az account list-locations --output table
+
+az account list-locations

@@ -5,3 +5,7 @@ az group create -n RG-Storage -l eastus
 
 #Eliminar grupo de recursos
 az group delete -n RG-Storage --yes
+
+#Lista de grupo de recursos
+az group list --output table
+

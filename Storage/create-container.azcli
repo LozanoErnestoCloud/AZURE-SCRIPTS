@@ -1,0 +1,32 @@
+#Lista de contenedores
+az storage container list \
+  --account-name deglstorageaccount \
+  --auth-mode login \
+  --output table
+
+#Crear un nuevo contenedor, con autenticacion a traves de Entra ID y sin accesos publico
+az storage container create \
+  --name datos-app \
+  --account-name deglstorageaccount \
+  --auth-mode login \
+  --public-access container
+
+#Eliminar contenedor
+az storage container delete \
+--name datos-app \
+--account-name deglstorageaccount \
+--auth-mode login \
+
+#Lista de blobs dentro de un contenedor
+az storage blob list \
+--container-name dasdasda \
+--account-name deglstorageaccount2 \
+--auth-mode login \
+-o table
+
+az storage blob download 
+--container-name <nombre> 
+--name foto.png 
+--file ./descargas/foto.png 
+--account-name <cuenta> 
+--auth-mode login

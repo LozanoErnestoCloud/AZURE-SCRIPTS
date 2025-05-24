@@ -1,0 +1,6 @@
+az storage account blob-service-properties update \
+  --resource-group $RG_NAME \
+  --account-name $SA_NAME \
+  --enable-versioning true \
+  --delete-retention true \
+  --delete-retention-days 14         

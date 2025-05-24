@@ -1,11 +1,10 @@
 #Crear nuevo grupo de recursos
 # -n = name
 # -l = location or region
-az group create -n RG-Storage -l eastus
+az group create -n rg-storage -l eastus
 
 #Eliminar grupo de recursos
-az group delete -n RG-Storage --yes
+az group delete -n RG-Storage
 
 #Lista de grupo de recursos
 az group list --output table
-

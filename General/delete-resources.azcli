@@ -1,0 +1,15 @@
+#Lista de recursos dentro de un grupo de recusos
+az resource list -g RG-Storage -o table
+
+#Lista de recursos con su tipo de recursos
+az resource list --query "[].{Nombre:name, Tipo:type}" -o table
+
+az resource delete \
+--resource-group RG-Storage \
+--name  demo184918186 \
+--resource-type Microsoft.Storage/storageAccounts
+
+
+
+
+

@@ -1,3 +1,6 @@
+#Verificar disponibilidad del nombre de cuenta
+az storage account check-name --name "deglstorageaccount"
+
 az storage account create \
   --name demo184918186 \
   --resource-group RG-Storage \
@@ -5,3 +8,17 @@ az storage account create \
   --sku Standard_LRS       # (opcional: este es el valor por defecto)
   --kind StorageV2         # (opcional: StorageV2 es el valor por defecto en 2025)
   --https-only true        # Recomendado: obliga a usar HTTPS
+
+#Creacion de cuenta con mas parametros
+az storage account create \
+  --name deglstorageaccount \
+  --resource-group rg-storage \
+  --location eastus2 \
+  --kind StorageV2 \
+  --sku Standard_GZRS \
+  --https-only true \
+  --min-tls-version TLS1_2 \
+  --allow-shared-key-access false \
+  --allow-blob-public-access false \
+  --public-network-access Disabled \
+  --tags owner=david env=prod
